@@ -39,7 +39,7 @@ export default function LeadScannerPage() {
     // <div className="max-w-4xl mx-auto p-6 min-h-screen transition-colors bg-white text-black dark:bg-black dark:text-white">
     <div className="w-full min-h-screen p-4 bg-white text-black dark:bg-black dark:text-white">   
     <ThemeToggle />
-      <h1 className="text-2xl font-bold mb-4">LeadScanner 🕵️</h1>
+      <h1 className="text-2xl font-bold mb-4">Lead Scanner</h1>
       <div className="max-w-7xl mx-auto p-4 flex gap-2 mb-4">
         <Input
           placeholder="Enter business keyword"
