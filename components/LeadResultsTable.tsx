@@ -4,14 +4,19 @@ import { Lead } from "@/lib/scraper/googleLeadsScraper";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Copy } from "lucide-react";
+import { toast } from "sonner";
+
 
 interface Props {
   leads: Lead[];
 }
 
 export function LeadResultsTable({ leads }: Props) {
-  const copyToClipboard = (text: string) => {
+  const copyToClipboard = (text: string, label: string) => {
     navigator.clipboard.writeText(text);
+    toast.success(`${label} copied to clipboard`, {
+      description: text,
+    });
   };
 
   return (
@@ -45,7 +50,7 @@ export function LeadResultsTable({ leads }: Props) {
                     <Button
                     variant="ghost"
                     size="icon"
-                    onClick={() => copyToClipboard(lead.email!)}
+                    onClick={() => copyToClipboard(lead.phone!, "Email")}
                     >
                     <Copy size={14} />
                     </Button>
@@ -59,7 +64,7 @@ export function LeadResultsTable({ leads }: Props) {
                     <Button
                     variant="ghost"
                     size="icon"
-                    onClick={() => copyToClipboard(lead.phone!)}
+                    onClick={() => copyToClipboard(lead.phone!, "Phone")}
                     >
                     <Copy size={14} />
                     </Button>
