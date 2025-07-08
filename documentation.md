@@ -78,6 +78,42 @@ leadscanner/
 
 ---
 
+## Scraper Modules
+
+The project includes robust web scrapers for business lead generation from multiple sources:
+
+- **Google Search Scraper** (`lib/scraper/googleLeadsScraper.ts`)
+  - Extracts business websites and contact info from Google search results.
+  - Uses Puppeteer for browser automation and Cheerio for HTML parsing.
+  - Filters out common directories and social sites.
+
+- **DuckDuckGo Scraper** (`lib/scraper/duckduckgoLeadsScraper.ts`)
+  - Similar to the Google scraper, but targets DuckDuckGo search results.
+  - Uses modern selectors and robust filtering for business links.
+
+- **JustDial Scraper** (`lib/scraper/justdialScraper.ts`)
+  - Scrapes business listings from JustDial, extracting names and addresses.
+  - Handles lazy loading and dynamic content.
+
+### Usage
+
+Each scraper exposes an async function (e.g., `scrapeLeadsFromGoogle`, `scrapeLeadsFromDuckDuckGo`, `scrapeJustDial`) that returns an array of `Lead` objects:
+
+```ts
+interface Lead {
+  name: string;
+  website?: string;
+  email?: string;
+  phone?: string;
+  address?: string;
+  source: string;
+}
+```
+
+You can import and use these functions in your backend or API routes to aggregate leads from multiple sources.
+
+---
+
 ## Environment Variables
 
 Create a `.env.local` file in the root directory to store environment-specific variables. Example:
