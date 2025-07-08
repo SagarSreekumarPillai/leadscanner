@@ -62,3 +62,19 @@ next-env.d.ts
 .env.development.local
 .env.test.local
 .env.production.local
+
+# macOS system files
++.DS_Store
++.AppleDouble
++.LSOverride
+
+# VSCode settings (already present, but ensure)
++.vscode/
+
+# Log, debug, and output files
+*.log
+*.csv
+*.tmp
+*.bak
+debug.html
+justdial-debug.html
