@@ -112,6 +112,12 @@ interface Lead {
 
 You can import and use these functions in your backend or API routes to aggregate leads from multiple sources.
 
+### UI Table Component
+
+The `LeadResultsTable` component (see `components/LeadResultsTable.tsx`) displays the scraped leads in a styled table. It includes:
+- Copy-to-clipboard buttons for email and phone fields, with toast notifications for user feedback (using the `sonner` library).
+- Responsive and accessible markup for easy integration into your Next.js pages.
+
 ---
 
 ## Environment Variables
