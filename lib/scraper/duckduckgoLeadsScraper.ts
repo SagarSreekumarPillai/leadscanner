@@ -67,6 +67,7 @@ export async function scrapeLeadsFromDuckDuckGo(keyword: string, location: strin
 }
 
 async function scrapeContactFromWebsite(browser: Browser, url: string) {
+    
   const page = await browser.newPage();
 
   try {
