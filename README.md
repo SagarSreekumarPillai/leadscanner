@@ -1,7 +1,5 @@
 # 🕵️‍♂️ LeadScanner
 
-![LeadScanner Banner](https://yourdomain.com/banner.png)
-
 **Version 1.0 – Stable & Production-Ready**  
 A smart, full-stack lead scraper built with performance, clarity, and UX in mind.
 
